@@ -1,0 +1,249 @@
+/* ===============================
+   ROOT THEME
+=============================== */
+:root {
+  --primary: #2563eb;
+  --secondary: #059669;
+  --bg: #f8fafc;
+  --dark: #1f2937;
+  --muted: #6b7280;
+  --danger: #dc2626;
+}
+
+/* ===============================
+   PAGE
+=============================== */
+body {
+  margin: 0;
+}
+
+.skin-page {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 50px 20px;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ===============================
+   TITLE
+=============================== */
+.skin-page h1 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: var(--dark);
+}
+
+/* ===============================
+   UPLOAD + BUTTON
+=============================== */
+.skin-page input[type="file"] {
+  display: block;
+  margin: 0 auto 18px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.skin-page button {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 45px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.skin-page button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.skin-page button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* ===============================
+   RESULTS GRID
+=============================== */
+.results-grid {
+  max-width: 1200px;
+  margin: 45px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+/* ===============================
+   RESULT CARD
+=============================== */
+.result-card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   IMAGE
+=============================== */
+.result-image {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #e5e7eb;
+}
+
+/* ===============================
+   TEXT
+=============================== */
+.result-card h3 {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: var(--dark);
+  word-break: break-word;
+}
+
+.result-card h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+/* ===============================
+   MODEL ROW
+=============================== */
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.result-row:last-child {
+  border-bottom: none;
+}
+
+/* ===============================
+   SCORE
+=============================== */
+.score {
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+/* ===============================
+   ERROR
+=============================== */
+.error {
+  color: var(--danger);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* ===============================
+   DISCLAIMER
+=============================== */
+.disclaimer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+
+/* ===============================
+   NAVBAR
+=============================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111827;
+  padding: 15px 40px;
+  color: white;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-menu li a:hover {
+  color: var(--primary);
+}
+
+.login-btn {
+  background: var(--primary);
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: white !important;
+}
+
+/* ===============================
+   MOBILE NAV
+=============================== */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .navbar-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111827;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 20px;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

@@ -1,0 +1,77 @@
+
+/* ===============================
+   NAVBAR
+=============================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111827;
+  padding: 15px 40px;
+  color: white;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-menu li a:hover {
+  color: var(--primary);
+}
+
+.login-btn {
+  background: var(--primary);
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: white !important;
+}
+
+/* ===============================
+   MOBILE NAV
+=============================== */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .navbar-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111827;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 20px;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

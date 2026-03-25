@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dataset | Skin Lesion Classification</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dataset.css') }}">
+</head>
+
+<body>
+
+{% include "navbar.html" %}
+
+<div class="dataset-page">
+
+    <!-- Header -->
+    <section class="dataset-header">
+        <h1>Dataset Description</h1>
+        <p>
+            Dermoscopic Skin Lesion Dataset Used for Deep Learning Benchmarking
+        </p>
+    </section>
+
+    <!-- Overview -->
+    <section class="dataset-section">
+        <h2>Dataset Overview</h2>
+        <p>
+            This study utilizes the HAM10000 dermoscopic skin lesion dataset.
+        </p>
+    </section>
+
+    <!-- Sample Images -->
+    <section class="dataset-section highlight">
+        <h2>Sample Dataset Images</h2>
+        <p>Click any image to download it.</p>
+
+        <div class="class-grid">
+
+            <!-- NV -->
+            <div class="class-card">
+                <h3>Melanocytic Nevus (NV)</h3>
+                <div class="image-grid">
+                    <img src="{{ url_for('static', filename='images/1.jpg') }}" class="dataset-image" alt="NV 1">
+                    <img src="{{ url_for('static', filename='images/2.jpg') }}" class="dataset-image" alt="NV 2">
+                </div>
+            </div>
+
+            <!-- MEL -->
+            <div class="class-card">
+                <h3>Melanoma (MEL)</h3>
+                <div class="image-grid">
+                    <img src="{{ url_for('static', filename='images/3.jpg') }}" class="dataset-image" alt="MEL 1">
+                    <img src="{{ url_for('static', filename='images/4.jpg') }}" class="dataset-image" alt="MEL 2">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Dataset Access -->
+    <section class="dataset-access">
+        <h2>Dataset Access</h2>
+        <p>The dataset is publicly available on Kaggle.</p>
+
+        <a href="https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000"
+           target="_blank"
+           class="dataset-link">
+           Access HAM10000 Dataset on Kaggle
+        </a>
+    </section>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/dataset.js') }}"></script>
+
+</body>
+</html>

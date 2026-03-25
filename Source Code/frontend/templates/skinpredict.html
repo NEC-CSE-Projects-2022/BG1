@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skin Lesion Detection System</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skinpredict.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="navbar-logo">
+        <a href="/">🧬 Skin Lesion Classification</a>
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu">
+        ☰
+    </div>
+
+    <ul class="navbar-menu" id="navbar-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/dataset">Dataset</a></li>
+        <li><a href="/skinpredict">Predict</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/login" class="login-btn">Login</a></li>
+    </ul>
+
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="skin-page">
+    <h1>🧬 Skin Lesion Detection System</h1>
+
+    <div class="upload-section">
+        <input type="file" id="imageInput" multiple accept="image/*">
+        <button type="button" id="predictBtn">Predict</button>
+    </div>
+
+    <div id="results" class="results-grid"></div>
+
+    <p class="disclaimer">
+        ⚠ Research use only. Not a medical diagnosis.
+    </p>
+</div>
+
+<!-- Navbar toggle -->
+<script>
+document.getElementById("mobile-menu").addEventListener("click", function() {
+    document.getElementById("navbar-links").classList.toggle("active");
+});
+</script>
+
+<!-- ✅ MOVE JS HERE (VERY IMPORTANT) -->
+<script src="{{ url_for('static', filename='js/skinpredict.js') }}"></script>
+
+</body>
+</html>

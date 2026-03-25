@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Skin Lesion Classification</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+
+{% include "navbar.html" %}
+
+<div class="home-container">
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>
+            Comparative Analysis of Quantum and Deep Learning Models
+        </h1>
+        <p>
+            Benchmarking Quantum Neural Networks and Classical CNNs
+            for Skin Lesion Classification
+        </p>
+    </section>
+
+    <!-- Motivation -->
+    <section class="section">
+        <h2>Research Motivation</h2>
+        <p>
+            Early and accurate classification of skin lesions is critical
+            for preventing severe medical complications, including skin cancer.
+            Traditional diagnosis relies heavily on expert interpretation, which
+            can be subjective and time-consuming. This research explores whether
+            emerging quantum machine learning models can compete with
+            well-established deep learning architectures under identical conditions.
+        </p>
+    </section>
+
+    <!-- Models -->
+    <section class="section">
+        <h2>Models Evaluated</h2>
+        <div class="models-grid">
+
+            <div class="model-card">
+                <h3>Quantum Models</h3>
+                <ul>
+                    <li>Quantum Neural Network (QNN)</li>
+                    <li>Quantum Support Vector Classifier (QSVC)</li>
+                </ul>
+            </div>
+
+            <div class="model-card">
+                <h3>Classical Deep Learning</h3>
+                <ul>
+                    <li>EfficientNet-B0</li>
+                    <li>MobileNetV3</li>
+                    <li>ResNet18</li>
+                    <li>EFAM-Net</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section highlight">
+        <h2>Key Findings</h2>
+        <p>
+            Experimental results show that classical deep learning models
+            significantly outperform quantum-based approaches in skin lesion
+            classification. EfficientNet-B0 and MobileNetV3 achieved over
+            <strong>90% validation accuracy</strong>, while quantum models
+            were limited to <strong>62–65%</strong> due to simulator and
+            circuit depth constraints.
+        </p>
+    </section>
+
+    <!-- Dataset -->
+    <section class="section">
+        <h2>Dataset Used</h2>
+        <p>
+            The experiments were conducted on the publicly available
+            <strong>HAM10000</strong> dataset, consisting of dermoscopic images
+            across multiple skin lesion categories. Stratified splitting and
+            data augmentation were applied to address class imbalance.
+        </p>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <p>Explore the dataset, models, and experimental results</p>
+        <div class="cta-buttons">
+            <a href="/dataset">View Dataset</a>
+            <a href="/login">Login</a>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

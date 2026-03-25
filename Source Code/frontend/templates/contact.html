@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Use SAME navbar + page styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skinpredict.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR (Same as SkinPredict) ================= -->
+<nav class="navbar">
+
+    <div class="navbar-logo">
+        <a href="/">🧬 Skin Lesion Classification</a>
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu">
+        ☰
+    </div>
+
+    <ul class="navbar-menu" id="navbar-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/dataset">Dataset</a></li>
+        <li><a href="/skinpredict">Predict</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/login" class="login-btn">Login</a></li>
+    </ul>
+
+</nav>
+
+<!-- ================= CONTACT PAGE ================= -->
+<div class="contact-container">
+    <h1>Contact Us</h1>
+    <p class="contact-subtitle">
+        Meet the people who are here to help you.
+    </p>
+
+    <!-- Team Section -->
+    <div class="team-section">
+
+        <div class="team-card">
+            <img src="{{ url_for('static', filename='images/Sireesha.jpeg') }}" 
+                 alt="Dr. Sireesha Moturi" class="team-image">
+            <h3>Dr. Sireesha Moturi</h3>
+            <h4>Co-ordinator & Guide</h4>
+        </div>
+
+        <div class="team-card">
+            <img src="{{ url_for('static', filename='images/Anjali.jpg.jpeg') }}" 
+                 alt="Chinnapareddy Anjali Reddy" class="team-image">
+            <h3>Chinnapareddy Anjali Reddy</h3>
+            <h4>Team Leader</h4>
+        </div>
+
+        <div class="team-card">
+            <img src="{{ url_for('static', filename='images/dhanu.jpg.jpeg') }}" 
+                 alt="Dogiparthi Dhanusha" class="team-image">
+            <h3>Dogiparthi Dhanusha</h3>
+            <h4>Team Member</h4>
+        </div>
+
+        <div class="team-card">
+            <img src="{{ url_for('static', filename='images/asifa.jpg.jpeg') }}" 
+                 alt="Shaik Chikli Asifa" class="team-image">
+            <h3>Shaik Chikli Asifa</h3>
+            <h4>Team Member</h4>
+        </div>
+
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form" id="contactForm">
+        <div>
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required>
+        </div>
+
+        <div>
+            <label>Email</label>
+            <input type="email" placeholder="Your email" required>
+        </div>
+
+        <div>
+            <label>Message</label>
+            <textarea placeholder="Your message" required></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+</div>
+
+<!-- Navbar toggle script -->
+<script>
+document.getElementById("mobile-menu").addEventListener("click", function() {
+    document.getElementById("navbar-links").classList.toggle("active");
+});
+</script>
+
+<script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+
+</body>
+</html>
